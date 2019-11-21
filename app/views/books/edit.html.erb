@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6">
+			<h1>Editing Book</h1>
+			<%= render 'layouts/error_messages', book: @book %>
+			<%= form_for(@book) do |f| %>
+				<strong>Title</strong>
+					<%= f.text_field :title, class:'col-md-12' %>
+				<p>Opinion</p>
+					<%=  f.text_area :body, class:'col-md-12' %>
+				<%= f.submit class:'col-md-12 btn btn-primary' %>
+			<% end %>
+			<%= link_to 'Show', book_path(@book.id) %> | <%= link_to 'Back', books_path %>
+		</div>
+	</div>
+</div>

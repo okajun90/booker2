@@ -1,0 +1,15 @@
+<div class="container">
+	<h2>User info</h2>
+	<%= render 'layouts/user_error_messages', user: @user %>
+	<%= form_for(@user) do |f| %>
+		<label>Name</label><br>
+		<%= f.text_field :name %><br>
+		<label>Image</label><br>
+		<%= f.attachment_field :profile_image %>
+
+		<label>Introduction</label><br>
+		<%= f.text_area :introduction %><br>
+		<%= f.submit %>
+	<% end %>
+
+</div>
